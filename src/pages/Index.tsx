@@ -28,8 +28,8 @@ const Index = () => {
     },
     {
       icon: "Shield",
-      title: "Работа без вложений",
-      description: "Запустите бизнес с нулевым стартовым капиталом"
+      title: "Работа с минимальными вложениями",
+      description: "Запустите бизнес со стартовым капиталом от 10 000₽"
     },
     {
       icon: "Target",
@@ -117,8 +117,8 @@ const Index = () => {
 
   const faq = [
     {
-      q: "Нужны ли вложения для старта?",
-      a: "Нет, курс включает методики работы без стартового капитала. Вы можете начать с бесплатных площадок вроде Авито."
+      q: "Какие вложения нужны для старта?",
+      a: "Минимальные вложения от 10 000₽. Курс включает методики работы с небольшим бюджетом. Вы можете начать с доступных площадок вроде Авито."
     },
     {
       q: "Сколько времени нужно уделять?",
@@ -152,64 +152,82 @@ const Index = () => {
         </div>
       </header>
 
-      <section className="py-20 px-4 bg-gradient-to-br from-primary/5 via-white to-accent/5">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 animate-fade-in">
-              <Badge className="text-sm font-semibold">Продвинутый уровень</Badge>
-              <h2 className="text-5xl md:text-6xl font-heading font-bold leading-tight">
-                Зарабатывай от <span className="text-primary">300 000₽</span> в месяц на дропшиппинге
-              </h2>
-              <p className="text-xl text-muted-foreground">
-                Полный курс по дропшиппингу + создание и продвижение сайтов. Научим зарабатывать без вложений и опыта.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="text-lg px-8 py-6 font-semibold">
-                  <Icon name="PlayCircle" className="mr-2" size={20} />
-                  Начать сейчас
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-2">
+          <div className="bg-white"></div>
+          <div className="bg-gradient-to-br from-primary via-primary/90 to-accent relative overflow-hidden">
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute top-20 right-20 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+              <div className="absolute bottom-20 left-20 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
+            </div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-white/20 text-[12rem] font-heading font-bold leading-none select-none">
+                PRO
+              </div>
+            </div>
+            <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/20 to-transparent"></div>
+          </div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid md:grid-cols-2 gap-12 items-center min-h-screen py-20">
+            <div className="space-y-8 animate-fade-in">
+              <Badge className="text-sm font-semibold bg-primary/10 text-primary border-primary/20">
+                Продвинутый уровень
+              </Badge>
+              <div className="space-y-6">
+                <h2 className="text-5xl md:text-7xl font-heading font-bold leading-[1.1] tracking-tight">
+                  Зарабатывай от{" "}
+                  <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                    300 000₽
+                  </span>{" "}
+                  в месяц
+                </h2>
+                <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
+                  Полный курс по дропшиппингу + создание и продвижение сайтов. 
+                  Научим зарабатывать с минимальными вложениями и без опыта.
+                </p>
+              </div>
+              
+              <div className="flex flex-wrap gap-4 pt-4">
+                <Button size="lg" className="text-lg px-8 py-7 font-semibold shadow-xl shadow-primary/20 hover:shadow-2xl hover:shadow-primary/30 transition-all">
+                  <Icon name="PlayCircle" className="mr-2" size={22} />
+                  Начать обучение
                 </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8 py-6 font-semibold">
-                  <Icon name="FileText" className="mr-2" size={20} />
+                <Button size="lg" variant="outline" className="text-lg px-8 py-7 font-semibold border-2 hover:bg-gray-50">
+                  <Icon name="FileText" className="mr-2" size={22} />
                   Программа курса
                 </Button>
               </div>
-              <div className="flex gap-6 pt-4">
-                <div>
-                  <div className="text-3xl font-heading font-bold text-primary">500+</div>
-                  <div className="text-sm text-muted-foreground">Успешных учеников</div>
+              
+              <div className="grid grid-cols-3 gap-6 pt-8 max-w-xl">
+                <div className="space-y-1">
+                  <div className="text-4xl font-heading font-bold text-primary">500+</div>
+                  <div className="text-sm text-muted-foreground font-medium">Учеников</div>
                 </div>
-                <div>
-                  <div className="text-3xl font-heading font-bold text-primary">75</div>
-                  <div className="text-sm text-muted-foreground">Уроков</div>
+                <div className="space-y-1">
+                  <div className="text-4xl font-heading font-bold text-primary">75</div>
+                  <div className="text-sm text-muted-foreground font-medium">Уроков</div>
                 </div>
-                <div>
-                  <div className="text-3xl font-heading font-bold text-primary">21 час</div>
-                  <div className="text-sm text-muted-foreground">Видеоконтента</div>
+                <div className="space-y-1">
+                  <div className="text-4xl font-heading font-bold text-primary">21 час</div>
+                  <div className="text-sm text-muted-foreground font-medium">Контента</div>
                 </div>
+              </div>
+              
+              <div className="flex items-center gap-4 pt-4">
+                <div className="flex -space-x-3">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold border-4 border-white shadow-lg">A</div>
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center text-white font-bold border-4 border-white shadow-lg">M</div>
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/80 to-accent/80 flex items-center justify-center text-white font-bold border-4 border-white shadow-lg">I</div>
+                </div>
+                <p className="text-sm text-muted-foreground max-w-xs">
+                  <span className="font-bold text-foreground">Более 500 человек</span> уже зарабатывают с нами
+                </p>
               </div>
             </div>
-            <div className="relative animate-slide-up">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary to-accent shadow-2xl flex items-center justify-center text-white">
-                <div className="text-center space-y-4 p-8">
-                  <div className="text-8xl">💰</div>
-                  <div className="text-2xl font-heading font-bold">Дропшиппинг PRO</div>
-                  <div className="text-lg opacity-90">Мастер e-commerce</div>
-                  <div className="pt-4 space-y-2">
-                    <div className="flex items-center justify-center gap-2">
-                      <Icon name="Check" size={20} />
-                      <span>Создание сайтов</span>
-                    </div>
-                    <div className="flex items-center justify-center gap-2">
-                      <Icon name="Check" size={20} />
-                      <span>Продвижение</span>
-                    </div>
-                    <div className="flex items-center justify-center gap-2">
-                      <Icon name="Check" size={20} />
-                      <span>Масштабирование</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            
+            <div className="relative animate-slide-up hidden md:block">
             </div>
           </div>
         </div>
