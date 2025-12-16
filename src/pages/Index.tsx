@@ -192,7 +192,7 @@ const Index = () => {
                 </div>
                 <div className="space-y-1">
                   <div className="text-3xl md:text-4xl font-heading font-bold text-[#0EA5E9]">20 000₽</div>
-                  <div className="text-xs md:text-sm text-gray-600 font-medium">Минимальная сделка</div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">Средний чек</div>
                 </div>
                 <div className="space-y-1 col-span-2 md:col-span-1">
                   <div className="text-3xl md:text-4xl font-heading font-bold text-[#0EA5E9]">24/7</div>
