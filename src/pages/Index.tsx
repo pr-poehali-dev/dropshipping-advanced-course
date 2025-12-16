@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
@@ -447,7 +448,7 @@ const Index = () => {
               </div>
               
               <p className="text-center text-xs md:text-sm text-gray-500 pt-4">
-                🔒 Безопасная оплата • Гарантия возврата 60 дней • <a href="#" className="underline hover:text-[#0EA5E9]">Договор оферты</a>
+                🔒 Безопасная оплата • Гарантия возврата 60 дней • <Link to="/oferta" className="underline hover:text-[#0EA5E9]">Договор оферты</Link>
               </p>
             </CardContent>
           </Card>
@@ -537,8 +538,8 @@ const Index = () => {
             </div>
             <div>
               <h4 className="font-semibold mb-4">Документы</h4>
-              <a href="#" className="block text-sm text-gray-600 mb-2 hover:text-[#0EA5E9]">Договор оферты</a>
-              <a href="#" className="block text-sm text-gray-600 hover:text-[#0EA5E9]">Политика конфиденциальности</a>
+              <Link to="/oferta" className="block text-sm text-gray-600 mb-2 hover:text-[#0EA5E9]">Договор оферты</Link>
+              <Link to="/privacy" className="block text-sm text-gray-600 hover:text-[#0EA5E9]">Политика конфиденциальности</Link>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Реквизиты</h4>
