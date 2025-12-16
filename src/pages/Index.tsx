@@ -10,131 +10,67 @@ import { useState } from "react";
 const Index = () => {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
 
-  const benefits = [
+  const reasons = [
     {
-      icon: "TrendingUp",
-      title: "От 0 до первых продаж за 2 недели",
-      description: "Пошаговая система запуска, проверенная на 500+ учениках"
-    },
-    {
-      icon: "Globe",
-      title: "Создание и продвижение сайтов",
-      description: "Научитесь создавать продающие лендинги и привлекать клиентов"
+      icon: "Award",
+      title: "Авторитет вместо анонимности",
+      description: "Ваш сайт создает образ серьезной компании. Вы не «частник на Авито», а профессиональный партнер"
     },
     {
       icon: "Zap",
-      title: "Автоматизация бизнеса",
-      description: "Готовые скрипты и инструменты для масштабирования"
+      title: "Автоматизация вместо рутины",
+      description: "Сайт работает на вас 24/7. AI-помощники анализируют рынок, генерируют контент и ведут диалог с клиентами"
     },
     {
-      icon: "Shield",
-      title: "Работа с минимальными вложениями",
-      description: "Запустите бизнес со стартовым капиталом от 10 000₽"
-    },
-    {
-      icon: "Target",
-      title: "Поиск трендовых товаров",
-      description: "Эксклюзивные методики выбора прибыльных ниш"
-    },
-    {
-      icon: "Users",
-      title: "Поддержка 24/7",
-      description: "Закрытое комьюнити и личные консультации"
+      icon: "Unlock",
+      title: "Свобода вместо ограничений",
+      description: "Вы не зависите от блокировок, комиссий и правил чужих площадок. Вы владеете активом"
     }
   ];
 
-  const modules = [
+  const steps = [
     {
-      title: "Модуль 1: Основы дропшиппинга",
-      lessons: "12 уроков",
-      duration: "3 часа",
-      topics: ["Что такое дропшиппинг", "Выбор платформы", "Регистрация и настройка", "Юридические аспекты"]
+      number: "01",
+      title: "Погружение в систему",
+      description: "Вы начинаете не с сайта, а с понимания модели. Мы даем методологию, учим работать с AI-помощниками и помогаем выбрать первую перспективную нишу"
     },
     {
-      title: "Модуль 2: Поиск прибыльных товаров",
-      lessons: "15 уроков",
-      duration: "4 часа",
-      topics: ["Анализ трендов на Авито", "Работа с поставщиками", "Ценообразование", "Конкурентный анализ"]
+      number: "02",
+      title: "Создание вашего актива",
+      description: "Только после этого вы создаете профессиональный сайт с помощью AI-помощников без навыков программирования"
     },
     {
-      title: "Модуль 3: Создание сайтов",
-      lessons: "20 уроков",
-      duration: "6 часов",
-      topics: ["Конструкторы сайтов", "Дизайн лендингов", "Копирайтинг", "Мобильная адаптация"]
+      number: "03",
+      title: "Привлечение клиентов на автопилоте",
+      description: "Запускаем поток заявок по нашему плану (SEO, контекстная реклама) с использованием AI для генерации контента"
     },
     {
-      title: "Модуль 4: Продвижение и реклама",
-      lessons: "18 уроков",
-      duration: "5 часов",
-      topics: ["SEO-оптимизация", "Таргетированная реклама", "Контент-маркетинг", "Email-рассылки"]
-    },
-    {
-      title: "Модуль 5: Масштабирование",
-      lessons: "10 уроков",
-      duration: "3 часа",
-      topics: ["Автоматизация процессов", "Найм команды", "Финансовый учет", "Выход на новые рынки"]
-    }
-  ];
-
-  const cases = [
-    {
-      name: "Алексей, 28 лет",
-      result: "От 0 до 300 000₽/мес за 3 месяца",
-      story: "Запустил магазин аксессуаров для телефонов на Авито. Первая продажа через 5 дней обучения.",
-      image: "👨‍💼"
-    },
-    {
-      name: "Марина, 34 года",
-      result: "Создала 5 прибыльных сайтов",
-      story: "Бывший офисный работник. Теперь зарабатываю на создании сайтов для дропшипперов 150 000₽/мес.",
-      image: "👩‍💻"
-    },
-    {
-      name: "Игорь, 22 года",
-      result: "500 000₽ за первые 6 месяцев",
-      story: "Студент, начал с нуля. Сейчас управляю 3 магазинами и командой из 4 человек.",
-      image: "🎓"
-    }
-  ];
-
-  const reviews = [
-    {
-      name: "Дмитрий К.",
-      rating: 5,
-      text: "Лучший курс по дропшиппингу на русском! Всё понятно объяснено, без воды. За месяц вышел на стабильные 80к."
-    },
-    {
-      name: "Елена М.",
-      rating: 5,
-      text: "Спасибо за модуль по созданию сайтов! Теперь делаю лендинги на заказ и это приносит больше, чем дропшиппинг."
-    },
-    {
-      name: "Андрей Л.",
-      rating: 5,
-      text: "Отличная поддержка в чате. На все вопросы отвечают в течение часа. Реально работающие схемы!"
+      number: "04",
+      title: "Закрытие сделок и получение прибыли",
+      description: "Вы ведете переговоры и заключаете контракты с нашей базой проверенных поставщиков. Вся аналитика и документы готовы"
     }
   ];
 
   const faq = [
     {
-      q: "Какие вложения нужны для старта?",
-      a: "Минимальные вложения от 10 000₽. Курс включает методики работы с небольшим бюджетом. Вы можете начать с доступных площадок вроде Авито."
+      q: "Нужны ли технические навыки для создания сайта?",
+      a: "Нет. Вы будете использовать AI-конструкторы, которые создают сайт по вашему описанию. Навыки программирования не требуются."
     },
     {
-      q: "Сколько времени нужно уделять?",
-      a: "Минимум 2-3 часа в день для изучения и применения материала. Первые результаты появляются через 1-2 недели."
+      q: "Сколько времени займет запуск?",
+      a: "Первые результаты (готовый сайт и первые заявки) за 10-14 дней. Первая сделка обычно происходит в течение месяца."
     },
     {
-      q: "Подойдет ли курс новичкам?",
-      a: "Да! Курс создан специально для людей без опыта в e-commerce и программировании. Всё объясняется с нуля."
+      q: "Какая поддержка предоставляется?",
+      a: "Личный наставник, закрытое комьюнити, еженедельные групповые созвоны и доступ к базе проверенных поставщиков."
     },
     {
-      q: "Есть ли поддержка после покупки?",
-      a: "Да, вы получаете доступ в закрытый чат с экспертами и другими учениками. Поддержка работает 24/7."
+      q: "Что входит в инвестицию 34 999₽?",
+      a: "Полный курс, доступ к AI-инструментам, личный наставник, база поставщиков, шаблоны документов и пожизненные обновления системы."
     },
     {
-      q: "Что если курс не подойдет?",
-      a: "Мы даем гарантию возврата денег в течение 14 дней, если вы не удовлетворены качеством материала."
+      q: "Есть ли гарантия результата?",
+      a: "Мы гарантируем, что если вы пройдете все 4 этапа и не получите первую сделку в течение 60 дней — вернем деньги."
     }
   ];
 
@@ -144,244 +80,258 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+    <div className="min-h-screen bg-white">
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-heading font-bold text-primary">💎 Дропшиппинг PRO</h1>
-          <Button size="lg" className="font-semibold">Начать обучение</Button>
+          <h1 className="text-xl md:text-2xl font-heading font-bold">🎯 AI ДОХОД</h1>
+          <Button size="lg" className="font-semibold bg-[#0EA5E9] hover:bg-[#0EA5E9]/90">
+            Начать сейчас
+          </Button>
         </div>
       </header>
 
+      {/* Hero Section - Split Screen */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-2">
           <div className="bg-white"></div>
-          <div className="bg-gradient-to-br from-primary via-primary/90 to-accent relative overflow-hidden">
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-20 right-20 w-72 h-72 bg-white rounded-full blur-3xl"></div>
-              <div className="absolute bottom-20 left-20 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
+          <div className="bg-gradient-to-br from-[#1A1F2C] via-[#1A1F2C]/95 to-[#0EA5E9]/20 relative overflow-hidden">
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute top-20 right-20 w-72 h-72 bg-[#F59E0B] rounded-full blur-3xl"></div>
+              <div className="absolute bottom-20 left-20 w-96 h-96 bg-[#0EA5E9] rounded-full blur-3xl"></div>
             </div>
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-white/20 text-[12rem] font-heading font-bold leading-none select-none">
-                PRO
+              <div className="text-white/10 text-[10rem] md:text-[14rem] font-heading font-bold leading-none select-none">
+                B2B
               </div>
             </div>
-            <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/20 to-transparent"></div>
           </div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center min-h-screen py-20">
-            <div className="space-y-8 animate-fade-in">
-              <Badge className="text-sm font-semibold bg-primary/10 text-primary border-primary/20">
-                Продвинутый уровень
+            <div className="space-y-6 md:space-y-8 animate-fade-in">
+              <Badge className="text-xs md:text-sm font-semibold bg-[#F59E0B]/10 text-[#F59E0B] border-[#F59E0B]/20">
+                Новая модель заработка 2026
               </Badge>
-              <div className="space-y-6">
-                <h2 className="text-5xl md:text-7xl font-heading font-bold leading-[1.1] tracking-tight">
-                  Зарабатывай от{" "}
-                  <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                    300 000₽
-                  </span>{" "}
-                  в месяц
+              <div className="space-y-4 md:space-y-6">
+                <h2 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold leading-[1.05] tracking-tight">
+                  Хватит быть одним из многих
                 </h2>
-                <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
-                  Полный курс по дропшиппингу + создание и продвижение сайтов. 
-                  Научим зарабатывать с минимальными вложениями и без опыта.
+                <p className="text-xl md:text-2xl font-semibold text-[#1A1F2C]">
+                  Создайте свой B2B-сайт за 1 день и выходите на сделки от{" "}
+                  <span className="text-[#0EA5E9]">20 000₽</span>
+                </p>
+                <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+                  Пока вы просматриваете объявления, умные игроки используют AI для создания бизнес-активов, 
+                  которые приносят от <span className="font-bold text-[#1A1F2C]">200 000₽ в месяц</span>
+                </p>
+              </div>
+              
+              <div className="bg-gradient-to-r from-[#F59E0B]/10 to-[#0EA5E9]/10 border-l-4 border-[#F59E0B] p-6 rounded-r-lg">
+                <p className="text-lg font-semibold text-[#1A1F2C]">
+                  Ваша новая роль: <span className="text-[#0EA5E9]">Умный организатор</span>, а не уставший перекуп
                 </p>
               </div>
               
               <div className="flex flex-wrap gap-4 pt-4">
-                <Button size="lg" className="text-lg px-8 py-7 font-semibold shadow-xl shadow-primary/20 hover:shadow-2xl hover:shadow-primary/30 transition-all">
-                  <Icon name="PlayCircle" className="mr-2" size={22} />
-                  Начать обучение
+                <Button size="lg" className="text-base md:text-lg px-6 md:px-10 py-6 md:py-8 font-bold shadow-2xl shadow-[#0EA5E9]/30 bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 transition-all hover:scale-105">
+                  <Icon name="Rocket" className="mr-2" size={24} />
+                  ПОЛУЧИТЬ СИСТЕМУ
                 </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8 py-7 font-semibold border-2 hover:bg-gray-50">
-                  <Icon name="FileText" className="mr-2" size={22} />
-                  Программа курса
+                <Button size="lg" variant="outline" className="text-base md:text-lg px-6 md:px-10 py-6 md:py-8 font-bold border-2 border-[#1A1F2C] hover:bg-[#1A1F2C] hover:text-white transition-all">
+                  <Icon name="Play" className="mr-2" size={24} />
+                  Как это работает
                 </Button>
               </div>
               
-              <div className="grid grid-cols-3 gap-6 pt-8 max-w-xl">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 pt-6">
                 <div className="space-y-1">
-                  <div className="text-4xl font-heading font-bold text-primary">500+</div>
-                  <div className="text-sm text-muted-foreground font-medium">Учеников</div>
-                </div>
-                <div className="space-y-1">
-                  <div className="text-4xl font-heading font-bold text-primary">75</div>
-                  <div className="text-sm text-muted-foreground font-medium">Уроков</div>
+                  <div className="text-3xl md:text-4xl font-heading font-bold text-[#0EA5E9]">10-14</div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">Дней до первых заявок</div>
                 </div>
                 <div className="space-y-1">
-                  <div className="text-4xl font-heading font-bold text-primary">21 час</div>
-                  <div className="text-sm text-muted-foreground font-medium">Контента</div>
+                  <div className="text-3xl md:text-4xl font-heading font-bold text-[#0EA5E9]">20 000₽</div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">Минимальная сделка</div>
                 </div>
-              </div>
-              
-              <div className="flex items-center gap-4 pt-4">
-                <div className="flex -space-x-3">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold border-4 border-white shadow-lg">A</div>
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center text-white font-bold border-4 border-white shadow-lg">M</div>
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/80 to-accent/80 flex items-center justify-center text-white font-bold border-4 border-white shadow-lg">I</div>
+                <div className="space-y-1 col-span-2 md:col-span-1">
+                  <div className="text-3xl md:text-4xl font-heading font-bold text-[#0EA5E9]">24/7</div>
+                  <div className="text-xs md:text-sm text-gray-600 font-medium">Сайт работает за вас</div>
                 </div>
-                <p className="text-sm text-muted-foreground max-w-xs">
-                  <span className="font-bold text-foreground">Более 500 человек</span> уже зарабатывают с нами
-                </p>
               </div>
             </div>
             
-            <div className="relative animate-slide-up hidden md:block">
+            <div className="hidden md:block"></div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why It Works */}
+      <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12 md:mb-16">
+            <Badge className="mb-4 text-sm font-semibold">Ваши преимущества</Badge>
+            <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4 md:mb-6">
+              Почему это работает там, где другие <span className="text-[#0EA5E9]">сдаются?</span>
+            </h2>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+            {reasons.map((reason, i) => (
+              <Card key={i} className="border-2 hover:border-[#0EA5E9] hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <CardHeader>
+                  <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br from-[#0EA5E9] to-[#1A1F2C] flex items-center justify-center mb-4">
+                    <Icon name={reason.icon} className="text-white" size={28} />
+                  </div>
+                  <CardTitle className="text-xl md:text-2xl font-heading">{reason.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm md:text-base text-gray-600 leading-relaxed">{reason.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4 Steps */}
+      <section className="py-16 md:py-24 px-4 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12 md:mb-16">
+            <Badge className="mb-4 text-sm font-semibold bg-[#F59E0B]/10 text-[#F59E0B]">
+              Ваш путь к первой сделке
+            </Badge>
+            <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4 md:mb-6">
+              <span className="text-[#0EA5E9]">Четыре этапа</span> к вашей первой сделке
+            </h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+              Которые изменят ваш 2026 год. Первые результаты за 10-14 дней
+            </p>
+          </div>
+          
+          <div className="space-y-6 md:space-y-8">
+            {steps.map((step, i) => (
+              <div key={i} className="group relative">
+                <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-start">
+                  <div className="flex-shrink-0 w-20 h-20 md:w-28 md:h-28 rounded-2xl bg-gradient-to-br from-[#0EA5E9] to-[#1A1F2C] flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                    <span className="text-3xl md:text-5xl font-heading font-bold text-white">{step.number}</span>
+                  </div>
+                  <div className="flex-1 bg-gray-50 rounded-2xl p-6 md:p-8 border-2 border-transparent group-hover:border-[#0EA5E9] transition-all">
+                    <h3 className="text-2xl md:text-3xl font-heading font-bold mb-3 md:mb-4">{step.title}</h3>
+                    <p className="text-base md:text-lg text-gray-600 leading-relaxed">{step.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="mt-12 md:mt-16 p-6 md:p-10 bg-gradient-to-r from-red-50 to-orange-50 border-l-4 border-red-500 rounded-r-2xl">
+            <p className="text-lg md:text-2xl font-bold text-[#1A1F2C] mb-2">
+              ⚠️ Что вы теряете, откладывая решение?
+            </p>
+            <p className="text-base md:text-lg text-gray-700">
+              Пока вы читаете это, ваши потенциальные клиенты ищут партнеров. Каждый день без системы — 
+              это упущенная прибыль от <span className="font-bold">5 000 до 50 000₽</span> на сделках, 
+              которые могли быть вашими.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-[#1A1F2C] to-[#0EA5E9]/20 text-white">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12 md:mb-16">
+            <Badge className="mb-4 text-sm font-semibold bg-[#F59E0B] text-white border-0">
+              Инвестиция в себя
+            </Badge>
+            <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4 md:mb-6">
+              Которая окупится с <span className="text-[#F59E0B]">первых сделок</span>
+            </h2>
+          </div>
+          
+          <Card className="border-4 border-[#F59E0B] shadow-2xl bg-white text-[#1A1F2C] overflow-hidden">
+            <div className="bg-gradient-to-r from-[#F59E0B] to-[#0EA5E9] p-6 md:p-8 text-center">
+              <p className="text-base md:text-lg font-semibold text-white mb-2">Полный доступ к системе</p>
+              <div className="flex items-baseline justify-center gap-2">
+                <span className="text-5xl md:text-7xl font-heading font-bold text-white">34 999</span>
+                <span className="text-2xl md:text-4xl text-white/90">₽</span>
+              </div>
+              <p className="text-sm md:text-base text-white/90 mt-2">Рассрочка и Яндекс Сплит доступны</p>
+            </div>
+            
+            <CardContent className="p-6 md:p-10 space-y-6">
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <Icon name="Check" className="text-[#0EA5E9] flex-shrink-0 mt-1" size={24} />
+                  <p className="text-base md:text-lg">Доход от <span className="font-bold">100 000 до 500 000₽</span> в месяц у наших студентов</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="Check" className="text-[#0EA5E9] flex-shrink-0 mt-1" size={24} />
+                  <p className="text-base md:text-lg">Одна крупная сделка (<span className="font-bold">от 40 000₽ прибыли</span>) полностью покроет инвестицию</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="Check" className="text-[#0EA5E9] flex-shrink-0 mt-1" size={24} />
+                  <p className="text-base md:text-lg">Личный наставник + база поставщиков + AI-инструменты</p>
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-r from-[#F59E0B]/10 to-[#0EA5E9]/10 p-6 md:p-8 rounded-xl border-2 border-[#F59E0B]">
+                <p className="text-base md:text-lg font-bold mb-2 flex items-center gap-2">
+                  <Icon name="Gift" className="text-[#F59E0B]" size={24} />
+                  БОНУС ДЛЯ РЕШИВШИХ В ТЕЧЕНИЕ 24 ЧАСОВ
+                </p>
+                <p className="text-sm md:text-base text-gray-700">
+                  Дополнительная сессия по продвижению вашего сайта 
+                  (стоимостью <span className="font-bold line-through">15 000₽</span>) — <span className="font-bold text-[#0EA5E9]">БЕСПЛАТНО</span>
+                </p>
+              </div>
+              
+              <Button size="lg" className="w-full text-lg md:text-xl py-6 md:py-8 font-bold bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 shadow-2xl hover:scale-105 transition-all">
+                <Icon name="Rocket" className="mr-2" size={26} />
+                НАПИШИТЕ «AI ДОХОД» СЕЙЧАС
+              </Button>
+              
+              <p className="text-center text-xs md:text-sm text-gray-500 pt-4">
+                🔒 Безопасная оплата • Гарантия возврата 60 дней • Пожизненный доступ
+              </p>
+            </CardContent>
+          </Card>
+          
+          <div className="mt-12 md:mt-16 text-center">
+            <h3 className="text-2xl md:text-4xl font-heading font-bold mb-6 md:mb-8">
+              💡 СДЕЛАЙТЕ ВЫБОР ПРЯМО СЕЙЧАС
+            </h3>
+            <div className="grid md:grid-cols-2 gap-4 md:gap-8 max-w-3xl mx-auto">
+              <div className="bg-red-500/20 border-2 border-red-500 rounded-xl p-6 md:p-8">
+                <p className="text-lg md:text-xl font-bold mb-2">❌ Вариант 1</p>
+                <p className="text-sm md:text-base">Продолжить искать «бесплатный сыр», теряя время и упуская клиентов</p>
+              </div>
+              <div className="bg-[#0EA5E9]/20 border-2 border-[#0EA5E9] rounded-xl p-6 md:p-8">
+                <p className="text-lg md:text-xl font-bold mb-2">✅ Вариант 2</p>
+                <p className="text-sm md:text-base">Инвестировать 34 999₽ и получить работающую систему за 30 дней</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">
-              Почему это лучший выбор?
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Полная система заработка от поиска товаров до автоматизации продаж
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, idx) => (
-              <Card key={idx} className="hover:shadow-xl transition-shadow duration-300 border-2">
-                <CardHeader>
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                    <Icon name={benefit.icon} className="text-primary" size={24} />
-                  </div>
-                  <CardTitle className="font-heading">{benefit.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{benefit.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 px-4 bg-gray-50">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">
-              Программа курса
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              5 модулей от базовых знаний до масштабирования бизнеса
-            </p>
-          </div>
-          <div className="grid gap-6">
-            {modules.map((module, idx) => (
-              <Card key={idx} className="border-2">
-                <CardHeader>
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <CardTitle className="font-heading text-2xl mb-2">{module.title}</CardTitle>
-                      <CardDescription className="flex gap-4 text-base">
-                        <span className="flex items-center gap-1">
-                          <Icon name="BookOpen" size={16} />
-                          {module.lessons}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <Icon name="Clock" size={16} />
-                          {module.duration}
-                        </span>
-                      </CardDescription>
-                    </div>
-                    <Badge variant="secondary" className="text-base px-4 py-1">
-                      Модуль {idx + 1}
-                    </Badge>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2">
-                    {module.topics.map((topic, topicIdx) => (
-                      <Badge key={topicIdx} variant="outline" className="text-sm">
-                        {topic}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">
-              Истории успеха наших учеников
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              Реальные результаты реальных людей
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {cases.map((caseItem, idx) => (
-              <Card key={idx} className="border-2 hover:shadow-xl transition-shadow">
-                <CardHeader>
-                  <div className="text-6xl mb-4 text-center">{caseItem.image}</div>
-                  <CardTitle className="font-heading text-center">{caseItem.name}</CardTitle>
-                  <CardDescription className="text-center">
-                    <span className="text-primary font-bold text-lg">{caseItem.result}</span>
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground text-center">{caseItem.story}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 px-4 bg-gradient-to-br from-primary/5 to-accent/5">
+      {/* FAQ */}
+      <section className="py-16 md:py-24 px-4 bg-white">
         <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">
-              Отзывы студентов
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              Что говорят наши ученики
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {reviews.map((review, idx) => (
-              <Card key={idx} className="border-2">
-                <CardHeader>
-                  <div className="flex gap-1 mb-2">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <Icon key={i} name="Star" size={18} className="fill-amber-400 text-amber-400" />
-                    ))}
-                  </div>
-                  <CardTitle className="font-heading text-lg">{review.name}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{review.text}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 px-4 bg-gray-50">
-        <div className="container mx-auto max-w-3xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">
-              Часто задаваемые вопросы
+          <div className="text-center mb-12">
+            <Badge className="mb-4 text-sm font-semibold">Частые вопросы</Badge>
+            <h2 className="text-3xl md:text-5xl font-heading font-bold">
+              Остались <span className="text-[#0EA5E9]">вопросы?</span>
             </h2>
           </div>
+          
           <Accordion type="single" collapsible className="space-y-4">
-            {faq.map((item, idx) => (
-              <AccordionItem key={idx} value={`item-${idx}`} className="border-2 rounded-lg px-6 bg-white">
-                <AccordionTrigger className="text-lg font-heading hover:no-underline">
+            {faq.map((item, i) => (
+              <AccordionItem key={i} value={`item-${i}`} className="border-2 rounded-xl px-6 bg-gray-50">
+                <AccordionTrigger className="text-base md:text-lg font-semibold hover:text-[#0EA5E9] py-6">
                   {item.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-base text-muted-foreground">
+                <AccordionContent className="text-sm md:text-base text-gray-600 pb-6">
                   {item.a}
                 </AccordionContent>
               </AccordionItem>
@@ -390,96 +340,48 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-gradient-to-br from-primary to-secondary text-white">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">
-              Готов начать зарабатывать?
-            </h2>
-            <p className="text-xl opacity-90 mb-8">
-              Оставь заявку и получи бесплатную консультацию
-            </p>
-          </div>
-          <Card className="border-0 shadow-2xl">
-            <CardContent className="p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium mb-2 text-foreground">Имя</label>
-                    <Input
-                      placeholder="Ваше имя"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="h-12"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2 text-foreground">Email</label>
-                    <Input
-                      type="email"
-                      placeholder="your@email.com"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="h-12"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2 text-foreground">Телефон</label>
-                  <Input
-                    placeholder="+7 (999) 123-45-67"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="h-12"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2 text-foreground">Сообщение</label>
-                  <Textarea
-                    placeholder="Расскажите о вашем опыте и целях..."
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="min-h-32"
-                  />
-                </div>
-                <Button type="submit" size="lg" className="w-full text-lg py-6 font-semibold bg-primary hover:bg-primary/90">
-                  <Icon name="Send" className="mr-2" size={20} />
-                  Отправить заявку
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
+      {/* Final CTA */}
+      <section className="py-16 md:py-20 px-4 bg-gradient-to-b from-[#1A1F2C] to-black text-white">
+        <div className="container mx-auto max-w-3xl text-center">
+          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6 md:mb-8">
+            Готовы создать свой <span className="text-[#F59E0B]">бизнес-актив?</span>
+          </h2>
+          <p className="text-lg md:text-xl mb-8 md:mb-12 text-gray-300">
+            Напишите «AI ДОХОД» и получите входной билет в новую систему заработка
+          </p>
+          <Button size="lg" className="text-lg md:text-xl px-10 md:px-16 py-7 md:py-10 font-bold bg-[#F59E0B] hover:bg-[#F59E0B]/90 shadow-2xl hover:scale-110 transition-all">
+            <Icon name="Send" className="mr-2" size={26} />
+            НАЧАТЬ ПРЯМО СЕЙЧАС
+          </Button>
+          <p className="text-xs md:text-sm text-gray-400 mt-6 md:mt-8">
+            Присоединяйтесь к тем, кто уже зарабатывает от 200 000₽ в месяц
+          </p>
         </div>
       </section>
 
-      <footer className="py-12 px-4 bg-secondary text-white">
+      {/* Footer */}
+      <footer className="border-t bg-white py-8 md:py-12 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <h3 className="text-xl font-heading font-bold mb-4">💎 Дропшиппинг PRO</h3>
-              <p className="opacity-80">
-                Полный курс по заработку на дропшиппинге, созданию и продвижению сайтов
+              <h3 className="font-heading font-bold text-lg mb-4">🎯 AI ДОХОД</h3>
+              <p className="text-sm text-gray-600">
+                Система создания B2B-сайтов с использованием искусственного интеллекта
               </p>
             </div>
             <div>
-              <h4 className="font-heading font-semibold mb-4">Контакты</h4>
-              <div className="space-y-2 opacity-80">
-                <p>Email: info@dropshipping-pro.ru</p>
-                <p>Telegram: @dropshipping_pro</p>
-                <p>WhatsApp: +7 (999) 123-45-67</p>
-              </div>
+              <h4 className="font-semibold mb-4">Контакты</h4>
+              <p className="text-sm text-gray-600 mb-2">Email: support@aidohod.ru</p>
+              <p className="text-sm text-gray-600">Telegram: @aidohod</p>
             </div>
             <div>
-              <h4 className="font-heading font-semibold mb-4">Полезное</h4>
-              <div className="space-y-2 opacity-80">
-                <p>Блог с кейсами</p>
-                <p>Бесплатные материалы</p>
-                <p>Отзывы учеников</p>
-              </div>
+              <h4 className="font-semibold mb-4">Документы</h4>
+              <p className="text-sm text-gray-600 mb-2">Оферта</p>
+              <p className="text-sm text-gray-600">Политика конфиденциальности</p>
             </div>
           </div>
-          <div className="border-t border-white/20 pt-8 text-center opacity-80">
-            <p>© 2024 Дропшиппинг PRO. Все права защищены.</p>
+          <div className="border-t pt-8 text-center text-sm text-gray-500">
+            <p>© 2026 AI ДОХОД. Все права защищены.</p>
           </div>
         </div>
       </footer>
