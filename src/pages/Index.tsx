@@ -118,18 +118,25 @@ const Index = () => {
       {/* Hero Section - Split Screen */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-2">
-          <div className="bg-white"></div>
-          <div className="bg-gradient-to-br from-[#1A1F2C] via-[#1A1F2C]/95 to-[#0EA5E9]/20 relative overflow-hidden">
-            <div className="absolute inset-0 opacity-5">
-              <div className="absolute top-20 right-20 w-72 h-72 bg-[#F59E0B] rounded-full blur-3xl"></div>
-              <div className="absolute bottom-20 left-20 w-96 h-96 bg-[#0EA5E9] rounded-full blur-3xl"></div>
+          <div className="bg-gradient-to-br from-gray-50 to-white"></div>
+          <div className="bg-gradient-to-br from-[#1A1F2C] via-[#0EA5E9]/10 to-[#1A1F2C] relative overflow-hidden">
+            <div className="absolute inset-0">
+              <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#F59E0B]/20 rounded-full blur-[120px] animate-pulse"></div>
+              <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#0EA5E9]/20 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-purple-500/10 rounded-full blur-[100px]"></div>
             </div>
+            <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[#1A1F2C]/50 to-[#1A1F2C]/80"></div>
             <div className="absolute inset-0 flex items-center justify-center p-8">
-              <img 
-                src="https://cdn.poehali.dev/files/edited_image_20251211192738.png" 
-                alt="Neural Business Builder" 
-                className="w-full max-w-md object-contain opacity-90 hover:opacity-100 transition-opacity"
-              />
+              <div className="relative group">
+                <div className="absolute -inset-4 bg-gradient-to-r from-[#0EA5E9] via-[#F59E0B] to-purple-600 rounded-3xl opacity-30 blur-2xl group-hover:opacity-50 transition-opacity duration-500"></div>
+                <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/20 shadow-2xl">
+                  <img 
+                    src="https://cdn.poehali.dev/files/edited_image_20251211192738.png" 
+                    alt="Neural Business Builder" 
+                    className="w-full max-w-md object-contain relative z-10 drop-shadow-2xl group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
