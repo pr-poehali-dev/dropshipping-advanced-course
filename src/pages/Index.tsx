@@ -99,10 +99,12 @@ const Index = () => {
               <div className="absolute top-20 right-20 w-72 h-72 bg-[#F59E0B] rounded-full blur-3xl"></div>
               <div className="absolute bottom-20 left-20 w-96 h-96 bg-[#0EA5E9] rounded-full blur-3xl"></div>
             </div>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-white/10 text-[10rem] md:text-[14rem] font-heading font-bold leading-none select-none">
-                B2B
-              </div>
+            <div className="absolute inset-0 flex items-center justify-center p-8">
+              <img 
+                src="https://cdn.poehali.dev/files/edited_image_20251211192738.png" 
+                alt="Neural Business Builder" 
+                className="w-full max-w-md object-contain opacity-90 hover:opacity-100 transition-opacity"
+              />
             </div>
           </div>
         </div>
@@ -134,14 +136,21 @@ const Index = () => {
               </div>
               
               <div className="flex flex-wrap gap-4 pt-4">
-                <Button size="lg" className="text-base md:text-lg px-6 md:px-10 py-6 md:py-8 font-bold shadow-2xl shadow-[#0EA5E9]/30 bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 transition-all hover:scale-105">
+                <Button size="lg" className="text-base md:text-lg px-6 md:px-10 py-6 md:py-8 font-bold shadow-2xl shadow-[#0EA5E9]/30 bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 transition-all hover:scale-105 animate-pulse">
                   <Icon name="Rocket" className="mr-2" size={24} />
-                  ПОЛУЧИТЬ СИСТЕМУ
+                  ПОЛУЧИТЬ СИСТЕМУ СЕЙЧАС
                 </Button>
                 <Button size="lg" variant="outline" className="text-base md:text-lg px-6 md:px-10 py-6 md:py-8 font-bold border-2 border-[#1A1F2C] hover:bg-[#1A1F2C] hover:text-white transition-all">
                   <Icon name="Play" className="mr-2" size={24} />
                   Как это работает
                 </Button>
+              </div>
+              
+              <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg mt-6">
+                <p className="text-sm md:text-base font-bold text-red-800 flex items-center gap-2">
+                  <Icon name="AlertTriangle" size={20} />
+                  Осталось 7 мест по цене 34 999₽. Далее — 49 999₽
+                </p>
               </div>
               
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 pt-6">
@@ -165,8 +174,71 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Urgency Banner */}
+      <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white py-3 px-4 animate-pulse">
+        <div className="container mx-auto">
+          <p className="text-center text-sm md:text-base font-bold flex items-center justify-center gap-2">
+            <Icon name="Clock" size={20} />
+            ⚡ ОСТАЛОСЬ 7 МЕСТ ПО АКЦИИ • БОНУС 15 000₽ ИСТЕКАЕТ ЧЕРЕЗ 24 ЧАСА
+            <Icon name="Flame" size={20} />
+          </p>
+        </div>
+      </div>
+
+      {/* Founder Message */}
+      <section className="py-16 md:py-20 px-4 bg-gradient-to-b from-white to-gray-50">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-[#0EA5E9] to-[#F59E0B] rounded-3xl opacity-20 blur-2xl"></div>
+              <img 
+                src="https://cdn.poehali.dev/files/edited_image_20251210211832.png" 
+                alt="Иван - Руководитель AI ДОХОД" 
+                className="relative rounded-2xl shadow-2xl w-full"
+              />
+            </div>
+            <div className="space-y-6">
+              <div className="flex items-center gap-4">
+                <div className="w-1 h-20 bg-gradient-to-b from-[#0EA5E9] to-[#F59E0B] rounded-full"></div>
+                <div>
+                  <h3 className="text-3xl md:text-4xl font-heading font-bold">Иван</h3>
+                  <p className="text-lg text-gray-600">Основатель AI ДОХОД</p>
+                </div>
+              </div>
+              <blockquote className="space-y-4 text-base md:text-lg leading-relaxed text-gray-700">
+                <p className="font-semibold text-xl text-[#1A1F2C]">
+                  «Я лично провел 200+ студентов к их первым сделкам от 20 000₽»
+                </p>
+                <p>
+                  За 3 года в B2B-посредничестве я понял одну вещь: <span className="font-bold text-[#0EA5E9]">технологии решают всё</span>. 
+                  Раньше на запуск бизнеса уходило 3-6 месяцев. С AI — 10-14 дней.
+                </p>
+                <p>
+                  Эта система работает. <span className="font-bold">Студенты зарабатывают от 100 000₽ до 500 000₽ в месяц</span>. 
+                  И да, я вкладываю личное время в каждого — потому что ваш результат это моя репутация.
+                </p>
+                <div className="flex items-center gap-3 pt-4">
+                  <div className="flex -space-x-2">
+                    <div className="w-10 h-10 rounded-full bg-[#0EA5E9] border-2 border-white"></div>
+                    <div className="w-10 h-10 rounded-full bg-[#F59E0B] border-2 border-white"></div>
+                    <div className="w-10 h-10 rounded-full bg-[#1A1F2C] border-2 border-white"></div>
+                  </div>
+                  <p className="text-sm font-semibold">
+                    <span className="text-[#0EA5E9]">200+ учеников</span> уже получили первые сделки
+                  </p>
+                </div>
+              </blockquote>
+              <Button size="lg" className="text-lg px-8 py-6 font-bold bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 shadow-xl hover:scale-105 transition-all">
+                <Icon name="MessageCircle" className="mr-2" size={22} />
+                СВЯЗАТЬСЯ С ИВАНОМ
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why It Works */}
-      <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-16 md:py-24 px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12 md:mb-16">
             <Badge className="mb-4 text-sm font-semibold">Ваши преимущества</Badge>
@@ -224,15 +296,19 @@ const Index = () => {
             ))}
           </div>
           
-          <div className="mt-12 md:mt-16 p-6 md:p-10 bg-gradient-to-r from-red-50 to-orange-50 border-l-4 border-red-500 rounded-r-2xl">
+          <div className="mt-12 md:mt-16 p-6 md:p-10 bg-gradient-to-r from-red-50 to-orange-50 border-l-4 border-red-500 rounded-r-2xl animate-pulse">
             <p className="text-lg md:text-2xl font-bold text-[#1A1F2C] mb-2">
               ⚠️ Что вы теряете, откладывая решение?
             </p>
             <p className="text-base md:text-lg text-gray-700">
               Пока вы читаете это, ваши потенциальные клиенты ищут партнеров. Каждый день без системы — 
-              это упущенная прибыль от <span className="font-bold">5 000 до 50 000₽</span> на сделках, 
+              это упущенная прибыль от <span className="font-bold text-red-600">5 000 до 50 000₽</span> на сделках, 
               которые могли быть вашими.
             </p>
+            <Button size="lg" className="mt-4 w-full md:w-auto text-lg px-8 py-6 font-bold bg-red-600 hover:bg-red-700">
+              <Icon name="TrendingUp" className="mr-2" size={22} />
+              НЕ ТЕРЯТЬ ДЕНЬГИ — НАЧАТЬ СЕЙЧАС
+            </Button>
           </div>
         </div>
       </section>
@@ -286,10 +362,21 @@ const Index = () => {
                 </p>
               </div>
               
-              <Button size="lg" className="w-full text-lg md:text-xl py-6 md:py-8 font-bold bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 shadow-2xl hover:scale-105 transition-all">
+              <Button size="lg" className="w-full text-lg md:text-xl py-6 md:py-8 font-bold bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 shadow-2xl hover:scale-105 transition-all animate-pulse">
                 <Icon name="Rocket" className="mr-2" size={26} />
                 НАПИШИТЕ «AI ДОХОД» СЕЙЧАС
               </Button>
+              
+              <div className="text-center space-y-2">
+                <p className="text-sm text-white/80 flex items-center justify-center gap-2">
+                  <Icon name="Users" size={16} />
+                  <span className="animate-pulse font-bold">37 человек</span> смотрят эту страницу прямо сейчас
+                </p>
+                <p className="text-sm text-white/80 flex items-center justify-center gap-2">
+                  <Icon name="CheckCircle" size={16} />
+                  Последняя покупка <span className="font-bold">12 минут назад</span>
+                </p>
+              </div>
               
               <p className="text-center text-xs md:text-sm text-gray-500 pt-4">
                 🔒 Безопасная оплата • Гарантия возврата 60 дней • Пожизненный доступ
@@ -349,10 +436,16 @@ const Index = () => {
           <p className="text-lg md:text-xl mb-8 md:mb-12 text-gray-300">
             Напишите «AI ДОХОД» и получите входной билет в новую систему заработка
           </p>
-          <Button size="lg" className="text-lg md:text-xl px-10 md:px-16 py-7 md:py-10 font-bold bg-[#F59E0B] hover:bg-[#F59E0B]/90 shadow-2xl hover:scale-110 transition-all">
+          <Button size="lg" className="text-lg md:text-xl px-10 md:px-16 py-7 md:py-10 font-bold bg-[#F59E0B] hover:bg-[#F59E0B]/90 shadow-2xl hover:scale-110 transition-all animate-pulse">
             <Icon name="Send" className="mr-2" size={26} />
             НАЧАТЬ ПРЯМО СЕЙЧАС
           </Button>
+          <div className="mt-6 space-y-2">
+            <p className="text-red-400 font-bold flex items-center justify-center gap-2">
+              <Icon name="Clock" size={20} />
+              Осталось 7 мест • Акция заканчивается через 24 часа
+            </p>
+          </div>
           <p className="text-xs md:text-sm text-gray-400 mt-6 md:mt-8">
             Присоединяйтесь к тем, кто уже зарабатывает от 200 000₽ в месяц
           </p>
