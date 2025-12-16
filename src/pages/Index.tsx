@@ -5,10 +5,34 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Index = () => {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
+  useEffect(() => {
+    const targetDate = new Date('2025-12-31T23:59:59').getTime();
+    
+    const updateTimer = () => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+      
+      if (distance > 0) {
+        setTimeLeft({
+          days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((distance % (1000 * 60)) / 1000)
+        });
+      }
+    };
+    
+    updateTimer();
+    const interval = setInterval(updateTimer, 1000);
+    
+    return () => clearInterval(interval);
+  }, []);
 
   const reasons = [
     {
@@ -174,14 +198,33 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Urgency Banner */}
-      <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white py-3 px-4 animate-pulse">
+      {/* Urgency Banner with Timer */}
+      <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white py-4 px-4">
         <div className="container mx-auto">
-          <p className="text-center text-sm md:text-base font-bold flex items-center justify-center gap-2">
-            <Icon name="Clock" size={20} />
-            ⚡ ОСТАЛОСЬ 7 МЕСТ ПО АКЦИИ • БОНУС 15 000₽ ИСТЕКАЕТ ЧЕРЕЗ 24 ЧАСА
-            <Icon name="Flame" size={20} />
-          </p>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+            <p className="text-sm md:text-base font-bold flex items-center gap-2">
+              <Icon name="Flame" size={20} />
+              АКЦИЯ ЗАКАНЧИВАЕТСЯ 31 ДЕКАБРЯ 2025
+            </p>
+            <div className="flex gap-2 md:gap-4">
+              <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-2 min-w-[60px] text-center">
+                <div className="text-xl md:text-2xl font-bold">{timeLeft.days}</div>
+                <div className="text-xs opacity-90">дней</div>
+              </div>
+              <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-2 min-w-[60px] text-center">
+                <div className="text-xl md:text-2xl font-bold">{timeLeft.hours}</div>
+                <div className="text-xs opacity-90">часов</div>
+              </div>
+              <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-2 min-w-[60px] text-center">
+                <div className="text-xl md:text-2xl font-bold">{timeLeft.minutes}</div>
+                <div className="text-xs opacity-90">минут</div>
+              </div>
+              <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-2 min-w-[60px] text-center">
+                <div className="text-xl md:text-2xl font-bold">{timeLeft.seconds}</div>
+                <div className="text-xs opacity-90">секунд</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -189,13 +232,15 @@ const Index = () => {
       <section className="py-16 md:py-20 px-4 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-[#0EA5E9] to-[#F59E0B] rounded-3xl opacity-20 blur-2xl"></div>
-              <img 
-                src="https://cdn.poehali.dev/files/edited_image_20251210211832.png" 
-                alt="Иван - Руководитель AI ДОХОД" 
-                className="relative rounded-2xl shadow-2xl w-full"
-              />
+            <div className="flex justify-center md:justify-start">
+              <div className="relative">
+                <div className="absolute -inset-2 bg-gradient-to-r from-[#0EA5E9] to-[#F59E0B] rounded-full opacity-30 blur-xl"></div>
+                <img 
+                  src="https://cdn.poehali.dev/files/edited_image_20251210211832.png" 
+                  alt="Иван - Руководитель AI ДОХОД" 
+                  className="relative rounded-full shadow-2xl w-64 h-64 object-cover border-4 border-white"
+                />
+              </div>
             </div>
             <div className="space-y-6">
               <div className="flex items-center gap-4">
@@ -362,10 +407,33 @@ const Index = () => {
                 </p>
               </div>
               
-              <Button size="lg" className="w-full text-lg md:text-xl py-6 md:py-8 font-bold bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 shadow-2xl hover:scale-105 transition-all animate-pulse">
-                <Icon name="Rocket" className="mr-2" size={26} />
-                НАПИШИТЕ «AI ДОХОД» СЕЙЧАС
-              </Button>
+              <div className="space-y-4">
+                <Button size="lg" className="w-full text-lg md:text-xl py-6 md:py-8 font-bold bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 shadow-2xl hover:scale-105 transition-all">
+                  <span className="mr-2 text-2xl">Я</span>
+                  ОПЛАТИТЬ ЯНДЕКС СПЛИТ
+                </Button>
+                <Button size="lg" className="w-full text-lg md:text-xl py-6 md:py-8 font-bold bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 shadow-2xl hover:scale-105 transition-all">
+                  <Icon name="CreditCard" className="mr-2" size={26} />
+                  ОПЛАТИТЬ КАРТОЙ
+                </Button>
+              </div>
+              
+              <div className="bg-green-50 border-2 border-green-200 rounded-xl p-6 space-y-3">
+                <div className="flex items-start gap-3">
+                  <Icon name="ShieldCheck" className="text-green-600 flex-shrink-0 mt-1" size={24} />
+                  <div>
+                    <h4 className="font-bold text-green-900 mb-1">Безопасная сделка гарантирована</h4>
+                    <p className="text-sm text-green-800">
+                      Мы — официальные партнёры <span className="font-bold">Яндекс Сплит</span>. 
+                      Яндекс проверяет всех партнёров перед подключением — это гарантия надёжности.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-green-700 pt-2 border-t border-green-200">
+                  <Icon name="FileCheck" size={16} />
+                  <span>ИП Кагачёв Иван Сергеевич • ИНН 510204469048</span>
+                </div>
+              </div>
               
               <div className="text-center space-y-2">
                 <p className="text-sm text-white/80 flex items-center justify-center gap-2">
@@ -379,7 +447,7 @@ const Index = () => {
               </div>
               
               <p className="text-center text-xs md:text-sm text-gray-500 pt-4">
-                🔒 Безопасная оплата • Гарантия возврата 60 дней • Пожизненный доступ
+                🔒 Безопасная оплата • Гарантия возврата 60 дней • <a href="#" className="underline hover:text-[#0EA5E9]">Договор оферты</a>
               </p>
             </CardContent>
           </Card>
@@ -455,7 +523,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="border-t bg-white py-8 md:py-12 px-4">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <h3 className="font-heading font-bold text-lg mb-4">🎯 AI ДОХОД</h3>
               <p className="text-sm text-gray-600">
@@ -469,12 +537,21 @@ const Index = () => {
             </div>
             <div>
               <h4 className="font-semibold mb-4">Документы</h4>
-              <p className="text-sm text-gray-600 mb-2">Оферта</p>
-              <p className="text-sm text-gray-600">Политика конфиденциальности</p>
+              <a href="#" className="block text-sm text-gray-600 mb-2 hover:text-[#0EA5E9]">Договор оферты</a>
+              <a href="#" className="block text-sm text-gray-600 hover:text-[#0EA5E9]">Политика конфиденциальности</a>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Реквизиты</h4>
+              <p className="text-sm text-gray-600 mb-1">ИП Кагачёв Иван Сергеевич</p>
+              <p className="text-sm text-gray-600 mb-1">ИНН 510204469048</p>
+              <div className="flex items-center gap-2 mt-3">
+                <Icon name="ShieldCheck" className="text-green-600" size={16} />
+                <span className="text-xs text-gray-500">Партнёр Яндекс Сплит</span>
+              </div>
             </div>
           </div>
           <div className="border-t pt-8 text-center text-sm text-gray-500">
-            <p>© 2026 AI ДОХОД. Все права защищены.</p>
+            <p>© 2025 AI ДОХОД. Все права защищены.</p>
           </div>
         </div>
       </footer>
