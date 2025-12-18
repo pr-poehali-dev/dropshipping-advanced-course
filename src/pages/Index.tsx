@@ -268,7 +268,7 @@ const Index = () => {
                 </div>
               </div>
               <blockquote className="space-y-4 text-base md:text-lg leading-relaxed text-gray-700">
-                <p className="font-semibold text-xl text-[#1A1F2C]">«Я лично провел 100+ студентов к их первым сделкам от 20 000₽»</p>
+                <p className="font-semibold text-xl text-[#1A1F2C]">«Я лично провел 100+ студентов к их первым сделкам от 5 000₽»</p>
                 <p>
                   За 3 года в B2B-посредничестве я понял одну вещь: <span className="font-bold text-[#0EA5E9]">технологии решают всё</span>. 
                   Раньше на запуск бизнеса уходило 3-6 месяцев. С AI — 10-14 дней.
