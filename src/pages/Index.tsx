@@ -168,10 +168,7 @@ const Index = () => {
               </div>
               
               <div className="flex flex-wrap gap-4 pt-4">
-                <Button size="lg" className="text-base md:text-lg px-6 md:px-10 py-6 md:py-8 font-bold shadow-2xl shadow-[#0EA5E9]/30 bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 transition-all hover:scale-105 animate-pulse">
-                  <Icon name="Rocket" className="mr-2" size={24} />
-                  ПОЛУЧИТЬ СИСТЕМУ СЕЙЧАС
-                </Button>
+                <Button size="lg" className="text-base md:text-lg px-6 md:px-10 py-6 md:py-8 font-bold shadow-2xl shadow-[#0EA5E9]/30 bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 transition-all hover:scale-105 animate-pulse">Начать курс обучения</Button>
                 <Button size="lg" variant="outline" className="text-base md:text-lg px-6 md:px-10 py-6 md:py-8 font-bold border-2 border-[#1A1F2C] hover:bg-[#1A1F2C] hover:text-white transition-all">
                   <Icon name="Play" className="mr-2" size={24} />
                   Как это работает
