@@ -526,7 +526,7 @@ const Index = () => {
           <div className="mt-6 space-y-2">
             <p className="text-red-400 font-bold flex items-center justify-center gap-2">
               <Icon name="Clock" size={20} />
-              Осталось 7 мест • Акция заканчивается через 24 часа
+              {spotsLeft <= 4 ? `Осталось всего ${spotsLeft} ${spotsLeft === 2 ? 'места' : 'места'}` : `Осталось ${spotsLeft} мест`} • Акция заканчивается через {timeLeft.days} {timeLeft.days === 1 ? 'день' : timeLeft.days >= 2 && timeLeft.days <= 4 ? 'дня' : 'дней'}
             </p>
           </div>
           <p className="text-xs md:text-sm text-gray-400 mt-6 md:mt-8">
