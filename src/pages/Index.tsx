@@ -284,7 +284,7 @@ const Index = () => {
                     <div className="w-10 h-10 rounded-full bg-[#1A1F2C] border-2 border-white"></div>
                   </div>
                   <p className="text-sm font-semibold">
-                    <span className="text-[#0EA5E9]">200+ учеников</span> уже получили первые сделки
+                    <span className="text-[#0EA5E9]">100+ учеников</span> уже получили первые сделки
                   </p>
                 </div>
               </blockquote>
