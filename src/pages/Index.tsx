@@ -109,7 +109,7 @@ const Index = () => {
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <h1 className="text-xl md:text-2xl font-heading font-bold">🎯 AI ДОХОД</h1>
-          <Button size="lg" className="font-semibold bg-[#0EA5E9] hover:bg-[#0EA5E9]/90">
+          <Button size="lg" className="font-semibold bg-[#0EA5E9] hover:bg-[#0EA5E9]/90" onClick={() => window.open('https://t.me/Ivan_936', '_blank')}>
             Начать сейчас
           </Button>
         </div>
@@ -168,7 +168,10 @@ const Index = () => {
               </div>
               
               <div className="flex flex-wrap gap-4 pt-4">
-                <Button size="lg" className="text-base md:text-lg px-6 md:px-10 py-6 md:py-8 font-bold shadow-2xl shadow-[#0EA5E9]/30 bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 transition-all hover:scale-105 animate-pulse">Начать курс обучения</Button>
+                <Button size="lg" className="text-base md:text-lg px-6 md:px-10 py-6 md:py-8 font-bold shadow-2xl shadow-[#0EA5E9]/30 bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 transition-all hover:scale-105 animate-pulse" onClick={() => window.open('https://t.me/Ivan_936', '_blank')}>
+                  <Icon name="Rocket" className="mr-2" size={24} />
+                  Начать курс обучения
+                </Button>
                 <Button size="lg" variant="outline" className="text-base md:text-lg px-6 md:px-10 py-6 md:py-8 font-bold border-2 border-[#1A1F2C] hover:bg-[#1A1F2C] hover:text-white transition-all">
                   <Icon name="Play" className="mr-2" size={24} />
                   Как это работает
@@ -278,7 +281,7 @@ const Index = () => {
                   </p>
                 </div>
               </blockquote>
-              <Button size="lg" className="text-lg px-8 py-6 font-bold bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 shadow-xl hover:scale-105 transition-all">
+              <Button size="lg" className="text-lg px-8 py-6 font-bold bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 shadow-xl hover:scale-105 transition-all" onClick={() => window.open('https://t.me/Ivan_936', '_blank')}>
                 <Icon name="MessageCircle" className="mr-2" size={22} />
                 СВЯЗАТЬСЯ С ИВАНОМ
               </Button>
@@ -355,7 +358,7 @@ const Index = () => {
               это упущенная прибыль от <span className="font-bold text-red-600">5 000 до 50 000₽</span> на сделках, 
               которые могли быть вашими.
             </p>
-            <Button size="lg" className="mt-4 w-full md:w-auto text-lg px-8 py-6 font-bold bg-red-600 hover:bg-red-700">
+            <Button size="lg" className="mt-4 w-full md:w-auto text-lg px-8 py-6 font-bold bg-red-600 hover:bg-red-700" onClick={() => window.open('https://t.me/Ivan_936', '_blank')}>
               <Icon name="TrendingUp" className="mr-2" size={22} />
               НЕ ТЕРЯТЬ ДЕНЬГИ — НАЧАТЬ СЕЙЧАС
             </Button>
@@ -413,11 +416,11 @@ const Index = () => {
               </div>
               
               <div className="space-y-4">
-                <Button size="lg" className="w-full text-lg md:text-xl py-6 md:py-8 font-bold bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 shadow-2xl hover:scale-105 transition-all">
-                  <span className="mr-2 text-2xl">Я</span>
-                  ОПЛАТИТЬ ЯНДЕКС СПЛИТ
+                <Button size="lg" className="w-full text-lg md:text-xl py-6 md:py-8 font-bold bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 shadow-2xl hover:scale-105 transition-all" onClick={() => window.open('https://t.me/Ivan_936', '_blank')}>
+                  <Icon name="CreditCard" className="mr-2" size={26} />
+                  ОПЛАТИТЬ В РАССРОЧКУ
                 </Button>
-                <Button size="lg" className="w-full text-lg md:text-xl py-6 md:py-8 font-bold bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 shadow-2xl hover:scale-105 transition-all">
+                <Button size="lg" className="w-full text-lg md:text-xl py-6 md:py-8 font-bold bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 shadow-2xl hover:scale-105 transition-all" onClick={() => window.open('https://t.me/Ivan_936', '_blank')}>
                   <Icon name="CreditCard" className="mr-2" size={26} />
                   ОПЛАТИТЬ КАРТОЙ
                 </Button>
@@ -509,7 +512,7 @@ const Index = () => {
           <p className="text-lg md:text-xl mb-8 md:mb-12 text-gray-300">
             Напишите «AI ДОХОД» и получите входной билет в новую систему заработка
           </p>
-          <Button size="lg" className="text-lg md:text-xl px-10 md:px-16 py-7 md:py-10 font-bold bg-[#F59E0B] hover:bg-[#F59E0B]/90 shadow-2xl hover:scale-110 transition-all animate-pulse">
+          <Button size="lg" className="text-lg md:text-xl px-10 md:px-16 py-7 md:py-10 font-bold bg-[#F59E0B] hover:bg-[#F59E0B]/90 shadow-2xl hover:scale-110 transition-all animate-pulse" onClick={() => window.open('https://t.me/Ivan_936', '_blank')}>
             <Icon name="Send" className="mr-2" size={26} />
             НАЧАТЬ ПРЯМО СЕЙЧАС
           </Button>
@@ -549,10 +552,6 @@ const Index = () => {
               <h4 className="font-semibold mb-4">Реквизиты</h4>
               <p className="text-sm text-gray-600 mb-1">ИП Кагачёв Иван Сергеевич</p>
               <p className="text-sm text-gray-600 mb-1">ИНН 510204469048</p>
-              <div className="flex items-center gap-2 mt-3">
-                <Icon name="ShieldCheck" className="text-green-600" size={16} />
-                <span className="text-xs text-gray-500">Партнёр Яндекс Сплит</span>
-              </div>
             </div>
           </div>
           <div className="border-t pt-8 text-center text-sm text-gray-500">
