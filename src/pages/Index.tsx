@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 const Index = () => {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [spotsLeft, setSpotsLeft] = useState(8);
 
   useEffect(() => {
     const targetDate = new Date('2025-12-31T23:59:59').getTime();
@@ -33,6 +34,14 @@ const Index = () => {
     const interval = setInterval(updateTimer, 1000);
     
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const startDate = new Date('2025-12-19').getTime();
+    const now = new Date().getTime();
+    const daysPassed = Math.floor((now - startDate) / (1000 * 60 * 60 * 24));
+    const calculatedSpots = Math.max(2, 8 - daysPassed);
+    setSpotsLeft(calculatedSpots);
   }, []);
 
   const reasons = [
@@ -181,7 +190,7 @@ const Index = () => {
               <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg mt-6">
                 <p className="text-sm md:text-base font-bold text-red-800 flex items-center gap-2">
                   <Icon name="AlertTriangle" size={20} />
-                  Осталось 7 мест по цене 34 999₽. Далее — 49 999₽
+                  {spotsLeft <= 4 ? `Осталось всего ${spotsLeft} ${spotsLeft === 2 ? 'места' : spotsLeft === 3 || spotsLeft === 4 ? 'места' : 'мест'} по цене 34 999₽. Далее — 49 999₽` : `Осталось ${spotsLeft} мест по цене 34 999₽. Далее — 49 999₽`}
                 </p>
               </div>
               
