@@ -558,7 +558,8 @@ const Index = () => {
             <div>
               <h4 className="font-semibold mb-4">Реквизиты</h4>
               <p className="text-sm text-gray-600 mb-1">ИП Кагачёв Иван Сергеевич</p>
-              <p className="text-sm text-gray-600 mb-1">ИНН 510204469048</p>
+              <p className="text-sm text-gray-600 mb-1">ИНН 510204469048
+ОГРНИП 324510000001255</p>
             </div>
           </div>
           <div className="border-t pt-8 text-center text-sm text-gray-500">
