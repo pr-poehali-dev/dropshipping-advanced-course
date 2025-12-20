@@ -12,6 +12,19 @@ const Index = () => {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const [spotsLeft, setSpotsLeft] = useState(8);
+  const [cookieAccepted, setCookieAccepted] = useState(false);
+
+  useEffect(() => {
+    const accepted = localStorage.getItem('cookieAccepted');
+    if (accepted === 'true') {
+      setCookieAccepted(true);
+    }
+  }, []);
+
+  const acceptCookies = () => {
+    localStorage.setItem('cookieAccepted', 'true');
+    setCookieAccepted(true);
+  };
 
   useEffect(() => {
     const targetDate = new Date('2025-12-31T23:59:59').getTime();
@@ -568,6 +581,25 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      {/* Cookie Notice */}
+      {!cookieAccepted && (
+        <div className="fixed bottom-0 left-0 right-0 bg-[#1A1F2C] text-white py-3 px-4 z-50 shadow-2xl">
+          <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p className="text-xs sm:text-sm">
+              Мы используем cookies для улучшения работы сайта. Продолжая использование сайта, вы соглашаетесь с{' '}
+              <Link to="/privacy" className="underline hover:text-[#0EA5E9]">политикой конфиденциальности</Link>.
+            </p>
+            <Button 
+              size="sm" 
+              onClick={acceptCookies}
+              className="bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 text-xs whitespace-nowrap"
+            >
+              Принять
+            </Button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
