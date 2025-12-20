@@ -553,7 +553,9 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="font-heading font-bold text-lg mb-4">🎯 AI ДОХОД</h3>
+              <Link to="/presentation">
+                <h3 className="font-heading font-bold text-lg mb-4 hover:text-[#0EA5E9] transition-colors cursor-pointer">🎯 AI ДОХОД</h3>
+              </Link>
               <p className="text-sm text-gray-600">
                 Система создания B2B-сайтов с использованием искусственного интеллекта
               </p>
