@@ -196,15 +196,15 @@ const Index = () => {
               
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 pt-6">
                 <div className="space-y-1">
-                  <div className="text-3xl md:text-4xl font-heading font-bold text-[#0EA5E9]">10-14</div>
+                  <div className="text-3xl md:text-4xl font-heading font-bold bg-gradient-to-r from-yellow-400 via-amber-500 to-yellow-600 bg-clip-text text-transparent md:text-[#0EA5E9]">10-14</div>
                   <div className="text-xs md:text-sm text-gray-600 font-medium">Дней до первых заявок</div>
                 </div>
                 <div className="space-y-1">
-                  <div className="text-3xl md:text-4xl font-heading font-bold text-[#0EA5E9]">20 000₽</div>
+                  <div className="text-3xl md:text-4xl font-heading font-bold bg-gradient-to-r from-yellow-400 via-amber-500 to-yellow-600 bg-clip-text text-transparent md:text-[#0EA5E9]">20 000₽</div>
                   <div className="text-xs md:text-sm text-gray-600 font-medium">Средний чек</div>
                 </div>
                 <div className="space-y-1 col-span-2 md:col-span-1">
-                  <div className="text-3xl md:text-4xl font-heading font-bold text-[#0EA5E9]">24/7</div>
+                  <div className="text-3xl md:text-4xl font-heading font-bold bg-gradient-to-r from-yellow-400 via-amber-500 to-yellow-600 bg-clip-text text-transparent md:text-[#0EA5E9]">24/7</div>
                   <div className="text-xs md:text-sm text-gray-600 font-medium">Сайт работает за вас</div>
                 </div>
               </div>
