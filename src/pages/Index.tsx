@@ -392,7 +392,7 @@ const Index = () => {
                 <span className="text-5xl md:text-7xl font-heading font-bold text-white">34 999</span>
                 <span className="text-2xl md:text-4xl text-white/90">₽</span>
               </div>
-              <p className="text-sm md:text-base text-white/90 mt-2">Рассрочка и Яндекс Сплит доступны</p>
+              <p className="text-sm md:text-base text-white/90 mt-2">Рассрочка доступна</p>
             </div>
             
             <CardContent className="p-6 md:p-10 space-y-6">
