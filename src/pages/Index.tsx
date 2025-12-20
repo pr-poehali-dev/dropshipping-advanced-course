@@ -548,7 +548,8 @@ const Index = () => {
             <div>
               <h4 className="font-semibold mb-4">Контакты</h4>
               <p className="text-sm text-gray-600 mb-2">Email: support@aidohod.ru</p>
-              <p className="text-sm text-gray-600">Telegram: @aidohod</p>
+              <p className="text-sm text-gray-600">Telegram: @Ivan_936
+Телефон: +7(499)840-33-12</p>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Документы</h4>
