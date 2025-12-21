@@ -141,7 +141,7 @@ const Index = () => {
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-2">
           <div className="bg-gradient-to-br from-gray-50 to-white"></div>
-          <div className="bg-gradient-to-br from-[#1A1F2C] via-[#0EA5E9]/10 to-[#1A1F2C] relative overflow-hidden">
+          <div className="bg-gradient-to-br from-[#1A1F2C] via-[#0EA5E9]/10 to-[#1A1F2C] relative overflow-hidden hidden md:block">
             <div className="absolute inset-0">
               <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#F59E0B]/20 rounded-full blur-[120px] animate-pulse"></div>
               <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#0EA5E9]/20 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '1s' }}></div>
@@ -183,10 +183,19 @@ const Index = () => {
                 </p>
               </div>
               
-              <div className="bg-gradient-to-r from-[#F59E0B]/10 to-[#0EA5E9]/10 border-l-4 border-[#F59E0B] p-6 rounded-r-lg">
-                <p className="text-lg font-semibold text-[#1A1F2C]">
+              <div className="bg-gradient-to-r from-[#F59E0B]/10 to-[#0EA5E9]/10 border-l-4 border-[#F59E0B] p-4 md:p-6 rounded-r-lg">
+                <p className="text-base md:text-lg font-semibold text-[#1A1F2C]">
                   Ваша новая роль: <span className="text-[#0EA5E9]">Умный организатор</span>, а не уставший перекуп
                 </p>
+              </div>
+              
+              {/* Mobile Image - показывается только на мобильных */}
+              <div className="md:hidden relative rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src="https://cdn.poehali.dev/files/edited_image_20251211192738.png" 
+                  alt="Neural Business Builder" 
+                  className="w-full object-contain"
+                />
               </div>
               
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4">
