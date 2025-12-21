@@ -387,9 +387,9 @@ const Index = () => {
               это упущенная прибыль от <span className="font-bold text-red-600">5 000 до 50 000₽</span> на сделках, 
               которые могли быть вашими.
             </p>
-            <Button size="lg" className="mt-4 w-full md:w-auto text-lg px-8 py-6 font-bold bg-red-600 hover:bg-red-700" onClick={() => window.open('https://t.me/Ivan_936', '_blank')}>
-              <Icon name="TrendingUp" className="mr-2" size={22} />
-              НЕ ТЕРЯТЬ ДЕНЬГИ — НАЧАТЬ СЕЙЧАС
+            <Button size="lg" className="mt-4 w-full md:w-auto text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 font-bold bg-red-600 hover:bg-red-700" onClick={() => window.open('https://t.me/Ivan_936', '_blank')}>
+              <Icon name="TrendingUp" className="mr-1 sm:mr-2 flex-shrink-0" size={18} />
+              <span className="leading-tight">НЕ ТЕРЯТЬ ДЕНЬГИ — НАЧАТЬ СЕЙЧАС</span>
             </Button>
           </div>
         </div>
