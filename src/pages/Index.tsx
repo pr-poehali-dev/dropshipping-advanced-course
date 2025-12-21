@@ -131,7 +131,7 @@ const Index = () => {
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-3 md:py-4 flex justify-between items-center">
           <h1 className="text-lg md:text-2xl font-heading font-bold">🎯 AI ДОХОД</h1>
-          <Button size="sm" className="text-sm md:text-base font-semibold bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 md:px-6" onClick={() => window.open('https://t.me/Ivan_936', '_blank')}>
+          <Button size="sm" className="text-xs sm:text-sm md:text-base font-semibold bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 px-3 sm:px-4 md:px-6 whitespace-nowrap" onClick={() => window.open('https://t.me/Ivan_936', '_blank')}>
             Начать сейчас
           </Button>
         </div>
