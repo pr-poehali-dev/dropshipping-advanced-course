@@ -129,9 +129,9 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-xl md:text-2xl font-heading font-bold">🎯 AI ДОХОД</h1>
-          <Button size="lg" className="font-semibold bg-[#0EA5E9] hover:bg-[#0EA5E9]/90" onClick={() => window.open('https://t.me/Ivan_936', '_blank')}>
+        <div className="container mx-auto px-4 py-3 md:py-4 flex justify-between items-center">
+          <h1 className="text-lg md:text-2xl font-heading font-bold">🎯 AI ДОХОД</h1>
+          <Button size="sm" className="text-sm md:text-base font-semibold bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 md:px-6" onClick={() => window.open('https://t.me/Ivan_936', '_blank')}>
             Начать сейчас
           </Button>
         </div>
@@ -189,13 +189,13 @@ const Index = () => {
                 </p>
               </div>
               
-              <div className="flex flex-wrap gap-4 pt-4">
-                <Button size="lg" className="text-base md:text-lg px-6 md:px-10 py-6 md:py-8 font-bold shadow-2xl shadow-[#0EA5E9]/30 bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 transition-all hover:scale-105 animate-pulse" onClick={() => window.open('https://t.me/Ivan_936', '_blank')}>
-                  <Icon name="Rocket" className="mr-2" size={24} />
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4">
+                <Button size="lg" className="w-full sm:w-auto text-base md:text-lg px-6 md:px-10 py-5 md:py-8 font-bold shadow-2xl shadow-[#0EA5E9]/30 bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 transition-all hover:scale-105 animate-pulse" onClick={() => window.open('https://t.me/Ivan_936', '_blank')}>
+                  <Icon name="Rocket" className="mr-2" size={20} />
                   Начать курс обучения
                 </Button>
-                <Button size="lg" variant="outline" className="text-base md:text-lg px-6 md:px-10 py-6 md:py-8 font-bold border-2 border-[#1A1F2C] hover:bg-[#1A1F2C] hover:text-white transition-all">
-                  <Icon name="Play" className="mr-2" size={24} />
+                <Button size="lg" variant="outline" className="w-full sm:w-auto text-base md:text-lg px-6 md:px-10 py-5 md:py-8 font-bold border-2 border-[#1A1F2C] hover:bg-[#1A1F2C] hover:text-white transition-all">
+                  <Icon name="Play" className="mr-2" size={20} />
                   Как это работает
                 </Button>
               </div>
@@ -207,18 +207,18 @@ const Index = () => {
                 </p>
               </div>
               
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 pt-6">
-                <div className="space-y-1">
-                  <div className="text-3xl md:text-4xl font-heading font-bold bg-gradient-to-r from-yellow-400 via-amber-500 to-yellow-600 bg-clip-text text-transparent md:text-[#0EA5E9]">10-14</div>
-                  <div className="text-xs md:text-sm text-black font-bold md:text-gray-600 md:font-medium">Дней до первых заявок</div>
+              <div className="grid grid-cols-3 gap-3 md:gap-6 pt-6">
+                <div className="space-y-1 text-center md:text-left">
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold bg-gradient-to-r from-yellow-400 via-amber-500 to-yellow-600 bg-clip-text text-transparent md:bg-none md:text-[#0EA5E9]">10-14</div>
+                  <div className="text-[10px] sm:text-xs md:text-sm text-black font-bold md:text-gray-600 md:font-medium leading-tight">Дней до первых заявок</div>
                 </div>
-                <div className="space-y-1">
-                  <div className="text-3xl md:text-4xl font-heading font-bold bg-gradient-to-r from-yellow-400 via-amber-500 to-yellow-600 bg-clip-text text-transparent md:text-[#0EA5E9]">20 000₽</div>
-                  <div className="text-xs md:text-sm text-black font-bold md:text-gray-600 md:font-medium">Средний чек</div>
+                <div className="space-y-1 text-center md:text-left">
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold bg-gradient-to-r from-yellow-400 via-amber-500 to-yellow-600 bg-clip-text text-transparent md:bg-none md:text-[#0EA5E9]">20 000₽</div>
+                  <div className="text-[10px] sm:text-xs md:text-sm text-black font-bold md:text-gray-600 md:font-medium leading-tight">Средний чек</div>
                 </div>
-                <div className="space-y-1 col-span-2 md:col-span-1">
-                  <div className="text-3xl md:text-4xl font-heading font-bold bg-gradient-to-r from-yellow-400 via-amber-500 to-yellow-600 bg-clip-text text-transparent md:text-[#0EA5E9]">24/7</div>
-                  <div className="text-xs md:text-sm text-black font-bold md:text-gray-600 md:font-medium">Сайт работает за вас</div>
+                <div className="space-y-1 text-center md:text-left">
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold bg-gradient-to-r from-yellow-400 via-amber-500 to-yellow-600 bg-clip-text text-transparent md:bg-none md:text-[#0EA5E9]">24/7</div>
+                  <div className="text-[10px] sm:text-xs md:text-sm text-black font-bold md:text-gray-600 md:font-medium leading-tight">Сайт работает за вас</div>
                 </div>
               </div>
             </div>
@@ -229,29 +229,29 @@ const Index = () => {
       </section>
 
       {/* Urgency Banner with Timer */}
-      <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white py-4 px-4">
+      <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white py-3 md:py-4 px-4">
         <div className="container mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-            <p className="text-sm md:text-base font-bold flex items-center gap-2">
-              <Icon name="Flame" size={20} />
-              АКЦИЯ ЗАКАНЧИВАЕТСЯ 31 ДЕКАБРЯ 2025
+          <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4">
+            <p className="text-xs sm:text-sm md:text-base font-bold flex items-center gap-2 text-center">
+              <Icon name="Flame" size={18} className="flex-shrink-0" />
+              <span>АКЦИЯ ЗАКАНЧИВАЕТСЯ 31 ДЕКАБРЯ 2025</span>
             </p>
             <div className="flex gap-2 md:gap-4">
-              <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-2 min-w-[60px] text-center">
-                <div className="text-xl md:text-2xl font-bold">{timeLeft.days}</div>
-                <div className="text-xs opacity-90">дней</div>
+              <div className="bg-white/20 backdrop-blur-sm rounded-lg px-2 sm:px-3 py-1.5 sm:py-2 min-w-[50px] sm:min-w-[60px] text-center">
+                <div className="text-lg sm:text-xl md:text-2xl font-bold">{timeLeft.days}</div>
+                <div className="text-[10px] sm:text-xs opacity-90">дней</div>
               </div>
-              <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-2 min-w-[60px] text-center">
-                <div className="text-xl md:text-2xl font-bold">{timeLeft.hours}</div>
-                <div className="text-xs opacity-90">часов</div>
+              <div className="bg-white/20 backdrop-blur-sm rounded-lg px-2 sm:px-3 py-1.5 sm:py-2 min-w-[50px] sm:min-w-[60px] text-center">
+                <div className="text-lg sm:text-xl md:text-2xl font-bold">{timeLeft.hours}</div>
+                <div className="text-[10px] sm:text-xs opacity-90">часов</div>
               </div>
-              <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-2 min-w-[60px] text-center">
-                <div className="text-xl md:text-2xl font-bold">{timeLeft.minutes}</div>
-                <div className="text-xs opacity-90">минут</div>
+              <div className="bg-white/20 backdrop-blur-sm rounded-lg px-2 sm:px-3 py-1.5 sm:py-2 min-w-[50px] sm:min-w-[60px] text-center">
+                <div className="text-lg sm:text-xl md:text-2xl font-bold">{timeLeft.minutes}</div>
+                <div className="text-[10px] sm:text-xs opacity-90">минут</div>
               </div>
-              <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-2 min-w-[60px] text-center">
-                <div className="text-xl md:text-2xl font-bold">{timeLeft.seconds}</div>
-                <div className="text-xs opacity-90">секунд</div>
+              <div className="bg-white/20 backdrop-blur-sm rounded-lg px-2 sm:px-3 py-1.5 sm:py-2 min-w-[50px] sm:min-w-[60px] text-center">
+                <div className="text-lg sm:text-xl md:text-2xl font-bold">{timeLeft.seconds}</div>
+                <div className="text-[10px] sm:text-xs opacity-90">секунд</div>
               </div>
             </div>
           </div>
@@ -301,8 +301,8 @@ const Index = () => {
                   </p>
                 </div>
               </blockquote>
-              <Button size="lg" className="text-lg px-8 py-6 font-bold bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 shadow-xl hover:scale-105 transition-all" onClick={() => window.open('https://t.me/Ivan_936', '_blank')}>
-                <Icon name="MessageCircle" className="mr-2" size={22} />
+              <Button size="lg" className="w-full sm:w-auto text-base md:text-lg px-6 md:px-8 py-5 md:py-6 font-bold bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 shadow-xl hover:scale-105 transition-all" onClick={() => window.open('https://t.me/Ivan_936', '_blank')}>
+                <Icon name="MessageCircle" className="mr-2" size={20} />
                 СВЯЗАТЬСЯ С ИВАНОМ
               </Button>
             </div>
@@ -424,42 +424,42 @@ const Index = () => {
                 </div>
               </div>
               
-              <div className="bg-gradient-to-r from-[#F59E0B]/10 to-[#0EA5E9]/10 p-6 md:p-8 rounded-xl border-2 border-[#F59E0B]">
-                <p className="text-base md:text-lg font-bold mb-2 flex items-center gap-2">
-                  <Icon name="Gift" className="text-[#F59E0B]" size={24} />
-                  БОНУС ДЛЯ РЕШИВШИХ В ТЕЧЕНИЕ 24 ЧАСОВ
+              <div className="bg-gradient-to-r from-[#F59E0B]/10 to-[#0EA5E9]/10 p-4 md:p-8 rounded-xl border-2 border-[#F59E0B]">
+                <p className="text-sm md:text-lg font-bold mb-2 flex items-start md:items-center gap-2">
+                  <Icon name="Gift" className="text-[#F59E0B] flex-shrink-0 mt-0.5" size={20} />
+                  <span>БОНУС ДЛЯ РЕШИВШИХ В ТЕЧЕНИЕ 24 ЧАСОВ</span>
                 </p>
-                <p className="text-sm md:text-base text-gray-700">
+                <p className="text-xs md:text-base text-gray-700">
                   Дополнительная сессия по продвижению вашего сайта 
                   (стоимостью <span className="font-bold line-through">15 000₽</span>) — <span className="font-bold text-[#0EA5E9]">БЕСПЛАТНО</span>
                 </p>
               </div>
               
-              <div className="space-y-4">
-                <Button size="lg" className="w-full text-lg md:text-xl py-6 md:py-8 font-bold bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 shadow-2xl hover:scale-105 transition-all" onClick={() => window.open('https://t.me/Ivan_936', '_blank')}>
-                  <Icon name="CreditCard" className="mr-2" size={26} />
+              <div className="space-y-3 md:space-y-4">
+                <Button size="lg" className="w-full text-base md:text-xl py-5 md:py-8 font-bold bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 shadow-2xl hover:scale-105 transition-all" onClick={() => window.open('https://t.me/Ivan_936', '_blank')}>
+                  <Icon name="CreditCard" className="mr-2" size={20} />
                   ОПЛАТИТЬ В РАССРОЧКУ
                 </Button>
-                <Button size="lg" className="w-full text-lg md:text-xl py-6 md:py-8 font-bold bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 shadow-2xl hover:scale-105 transition-all" onClick={() => window.open('https://t.me/Ivan_936', '_blank')}>
-                  <Icon name="CreditCard" className="mr-2" size={26} />
+                <Button size="lg" className="w-full text-base md:text-xl py-5 md:py-8 font-bold bg-[#0EA5E9] hover:bg-[#0EA5E9]/90 shadow-2xl hover:scale-105 transition-all" onClick={() => window.open('https://t.me/Ivan_936', '_blank')}>
+                  <Icon name="CreditCard" className="mr-2" size={20} />
                   ОПЛАТИТЬ КАРТОЙ
                 </Button>
               </div>
               
-              <div className="bg-green-50 border-2 border-green-200 rounded-xl p-6 space-y-3">
-                <div className="flex items-start gap-3">
-                  <Icon name="ShieldCheck" className="text-green-600 flex-shrink-0 mt-1" size={24} />
+              <div className="bg-green-50 border-2 border-green-200 rounded-xl p-4 md:p-6 space-y-3">
+                <div className="flex items-start gap-2 md:gap-3">
+                  <Icon name="ShieldCheck" className="text-green-600 flex-shrink-0 mt-1" size={20} />
                   <div>
-                    <h4 className="font-bold text-green-900 mb-1">Безопасная сделка гарантирована</h4>
-                    <p className="text-sm text-green-800">
+                    <h4 className="font-bold text-green-900 mb-1 text-sm md:text-base">Безопасная сделка гарантирована</h4>
+                    <p className="text-xs md:text-sm text-green-800">
                       Мы — официальные партнёры платёжных систем. 
                       Все транзакции защищены и проверены.
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 text-xs text-green-700 pt-2 border-t border-green-200">
-                  <Icon name="FileCheck" size={16} />
-                  <span>ИП Кагачёв Иван Сергеевич • ИНН 510204469048</span>
+                <div className="flex items-center gap-2 text-[10px] md:text-xs text-green-700 pt-2 border-t border-green-200">
+                  <Icon name="FileCheck" size={14} className="flex-shrink-0" />
+                  <span className="break-words">ИП Кагачёв Иван Сергеевич • ИНН 510204469048</span>
                 </div>
               </div>
               
@@ -532,14 +532,18 @@ const Index = () => {
           <p className="text-lg md:text-xl mb-8 md:mb-12 text-gray-300">
             Напишите «AI ДОХОД» и получите входной билет в новую систему заработка
           </p>
-          <Button size="lg" className="text-lg md:text-xl px-10 md:px-16 py-7 md:py-10 font-bold bg-[#F59E0B] hover:bg-[#F59E0B]/90 shadow-2xl hover:scale-110 transition-all animate-pulse" onClick={() => window.open('https://t.me/Ivan_936', '_blank')}>
-            <Icon name="Send" className="mr-2" size={26} />
+          <Button size="lg" className="w-full sm:w-auto text-base md:text-xl px-8 md:px-16 py-6 md:py-10 font-bold bg-[#F59E0B] hover:bg-[#F59E0B]/90 shadow-2xl hover:scale-110 transition-all animate-pulse" onClick={() => window.open('https://t.me/Ivan_936', '_blank')}>
+            <Icon name="Send" className="mr-2" size={20} />
             НАЧАТЬ ПРЯМО СЕЙЧАС
           </Button>
           <div className="mt-6 space-y-2">
-            <p className="text-red-400 font-bold flex items-center justify-center gap-2">
-              <Icon name="Clock" size={20} />
-              {spotsLeft <= 4 ? `Осталось всего ${spotsLeft} ${spotsLeft === 2 ? 'места' : 'места'}` : `Осталось ${spotsLeft} мест`} • Акция заканчивается через {timeLeft.days} {timeLeft.days === 1 ? 'день' : timeLeft.days >= 2 && timeLeft.days <= 4 ? 'дня' : 'дней'}
+            <p className="text-red-400 font-bold flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 text-sm md:text-base">
+              <span className="flex items-center gap-2">
+                <Icon name="Clock" size={18} />
+                {spotsLeft <= 4 ? `Осталось всего ${spotsLeft} ${spotsLeft === 2 ? 'места' : 'места'}` : `Осталось ${spotsLeft} мест`}
+              </span>
+              <span className="hidden sm:inline">•</span>
+              <span>Акция заканчивается через {timeLeft.days} {timeLeft.days === 1 ? 'день' : timeLeft.days >= 2 && timeLeft.days <= 4 ? 'дня' : 'дней'}</span>
             </p>
           </div>
           <p className="text-xs md:text-sm text-gray-400 mt-6 md:mt-8">
@@ -551,7 +555,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="border-t bg-white py-8 md:py-12 px-4">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-8">
             <div>
               <Link to="/presentation">
                 <h3 className="font-heading font-bold text-lg mb-4 hover:text-[#0EA5E9] transition-colors cursor-pointer">🎯 AI ДОХОД</h3>
