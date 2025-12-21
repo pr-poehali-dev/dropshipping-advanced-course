@@ -1,8 +1,51 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Icon from "@/components/ui/icon";
+import { useEffect } from "react";
 
 const Presentation = () => {
+  useEffect(() => {
+    // Update meta tags for social sharing
+    document.title = "Дропшиппинг 2.0: Ваш бизнес на автопилоте с помощью AI";
+    
+    const updateMetaTag = (property: string, content: string) => {
+      let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
+      if (!meta) {
+        meta = document.querySelector(`meta[name="${property}"]`) as HTMLMetaElement;
+      }
+      if (meta) {
+        meta.content = content;
+      } else {
+        meta = document.createElement('meta');
+        if (property.startsWith('og:') || property.startsWith('twitter:')) {
+          meta.setAttribute('property', property);
+        } else {
+          meta.setAttribute('name', property);
+        }
+        meta.content = content;
+        document.head.appendChild(meta);
+      }
+    };
+
+    updateMetaTag('og:title', 'Дропшиппинг 2.0: Ваш бизнес на автопилоте с помощью AI');
+    updateMetaTag('og:description', 'Рынок изменился. Те, кто используют AI, получают преимущество в 10 раз.');
+    updateMetaTag('og:image', 'https://cdn.poehali.dev/files/edited_image_20251215213452.png');
+    updateMetaTag('og:url', window.location.href);
+    updateMetaTag('twitter:title', 'Дропшиппинг 2.0: Ваш бизнес на автопилоте с помощью AI');
+    updateMetaTag('twitter:description', 'Рынок изменился. Те, кто используют AI, получают преимущество в 10 раз.');
+    updateMetaTag('twitter:image', 'https://cdn.poehali.dev/files/edited_image_20251215213452.png');
+    
+    return () => {
+      // Restore original meta tags when leaving the page
+      document.title = "AI ДОХОД — B2B сайты";
+      updateMetaTag('og:title', 'AI ДОХОД — B2B сайты');
+      updateMetaTag('og:description', 'Создайте B2B-сайт с AI и выходите на сделки от 20 000₽');
+      updateMetaTag('og:image', 'https://cdn.poehali.dev/files/edited_image_20251215213452.png');
+      updateMetaTag('twitter:title', 'AI ДОХОД — B2B сайты');
+      updateMetaTag('twitter:description', 'Создайте B2B-сайт с AI и выходите на сделки от 20 000₽');
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#1A1F2C] to-[#0F1419]">
       <div className="container mx-auto px-4 py-6 md:py-12">
